@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 274070545}
   - component: {fileID: 274070546}
   - component: {fileID: 274070547}
+  - component: {fileID: 274070548}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -438,11 +439,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c782e80fc36dbf74b839b71c5bac3255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
   targetCheck: {fileID: 1361361242}
   targetCheckRadius: 1
   whatIsTarget:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &274070548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274070542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261a63ad5ae975449b3e0a29310a7511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  isDead: 0
 --- !u!1 &344415102
 GameObject:
   m_ObjectHideFlags: 0
@@ -61203,6 +61219,7 @@ GameObject:
   - component: {fileID: 1824338484}
   - component: {fileID: 1824338485}
   - component: {fileID: 1824338486}
+  - component: {fileID: 1824338487}
   m_Layer: 8
   m_Name: Enemy_Skeleton
   m_TagString: Untagged
@@ -61337,11 +61354,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c782e80fc36dbf74b839b71c5bac3255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
   targetCheck: {fileID: 439683228}
   targetCheckRadius: 1
   whatIsTarget:
     serializedVersion: 2
     m_Bits: 384
+--- !u!114 &1824338487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824338481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261a63ad5ae975449b3e0a29310a7511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  isDead: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
