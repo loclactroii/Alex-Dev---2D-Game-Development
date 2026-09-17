@@ -46,6 +46,11 @@ public class Entity : MonoBehaviour
         stateMachine.currentState.AnimationTrigger();
     }
 
+    public virtual void EntityDeath()
+    {
+
+    }
+
     public void ReceiveKnockback(Vector2 knockback, float duration)
     {
         if (knockbackCo != null)
@@ -102,8 +107,6 @@ public class Entity : MonoBehaviour
             wallDetected = Physics2D.Raycast(primaryWallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
 
     }
-
-
     protected virtual void OnDrawGizmos()
     {
         Gizmos.DrawLine(groundCheck.position, groundCheck.position + new Vector3(0, -groundCheckDistance));
