@@ -20,6 +20,5 @@ public class Enemy_MoveState : Enemy_GroundedState
 
         if (!enemy.groundDetected || enemy.wallDetected)
             stateMachine.ChangeState(enemy.idleState);
-        
     }
 }
