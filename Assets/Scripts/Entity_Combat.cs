@@ -13,8 +13,8 @@ public class Entity_Combat : MonoBehaviour
     {
         foreach(var target in GetDetectedColliers())
         {
-            Entity_Heath targetHeath = target.GetComponent<Entity_Heath>();
-            targetHeath?.TakeDamage(damage, transform);
+            IDamagable damagable = target.GetComponent<IDamagable>();
+            damagable?.TakeDamage(damage, transform);
         }
     }
 

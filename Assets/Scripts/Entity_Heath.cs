@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Entity_Heath : MonoBehaviour
+public class Entity_Heath : MonoBehaviour, IDamagable
 {
     private Entity_VFX entityVfx;
     private Entity entity;
