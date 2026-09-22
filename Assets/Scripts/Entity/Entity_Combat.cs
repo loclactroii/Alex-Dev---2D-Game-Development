@@ -18,7 +18,7 @@ public class Entity_Combat : MonoBehaviour
         }
     }
 
-    private Collider2D[] GetDetectedColliers()
+    protected Collider2D[] GetDetectedColliers()
     {
         return Physics2D.OverlapCircleAll(targetCheck.position, targetCheckRadius, whatIsTarget);
     }
