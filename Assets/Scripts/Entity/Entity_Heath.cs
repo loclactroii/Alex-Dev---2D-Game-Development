@@ -1,8 +1,9 @@
-using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Entity_Heath : MonoBehaviour, IDamagable
 {
+    private Slider healthBar;
     private Entity_VFX entityVfx;
     private Entity entity;
 
@@ -23,8 +24,10 @@ public class Entity_Heath : MonoBehaviour, IDamagable
     {
         entityVfx = GetComponent<Entity_VFX>();
         entity = GetComponent<Entity>();
+        healthBar = GetComponentInChildren<Slider>();
 
         currentHp = maxHp;
+        UpdateHealthBar();
     }
 
     public virtual void TakeDamage(float damage, Transform damageDealer)
@@ -43,6 +46,7 @@ public class Entity_Heath : MonoBehaviour, IDamagable
     protected void ReduceHp(float damage)
     {
         currentHp -= damage;
+        UpdateHealthBar();
 
         if (currentHp <= 0)
             Die();
@@ -54,15 +58,22 @@ public class Entity_Heath : MonoBehaviour, IDamagable
         entity.EntityDeath();
     }
 
+    private void UpdateHealthBar()
+    {
+        if (healthBar)
+            healthBar.value = currentHp / maxHp;
+    }
+
+
     private Vector2 CalculateKnockback(float damage, Transform damageDealer)
     {
         int direction = transform.position.x > damageDealer.position.x ? 1 : -1;
-        Vector2 knockback = isHeavyDamage(damage) ? heavyKnockbackPower: knockbackPower;
+        Vector2 knockback = isHeavyDamage(damage) ? heavyKnockbackPower : knockbackPower;
         knockback.x = knockback.x * direction;
         return knockback;
     }
 
 
     private float CalculateDuration(float damage) => isHeavyDamage(damage) ? heavyKnockbackDuration : knockbackDuration;
-    private bool isHeavyDamage(float damage) => damage / maxHp > heavyDamageThreshold; 
+    private bool isHeavyDamage(float damage) => damage / maxHp > heavyDamageThreshold;
 }
