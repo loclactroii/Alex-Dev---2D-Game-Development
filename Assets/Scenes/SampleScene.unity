@@ -574,8 +574,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDamageMaterial: {fileID: 2100000, guid: 07ed9e5950dba9a45b1196e37739b38b, type: 2}
   onDamageVfxDuration: 0.15
-  hitVfx: {fileID: 1121745665439297114, guid: 6eb44fe143bed544b98e7f91927d5871, type: 3}
   hitVfxColor: {r: 0.9892141, g: 1, b: 0.042452812, a: 1}
+  hitVfx: {fileID: 1121745665439297114, guid: 6eb44fe143bed544b98e7f91927d5871, type: 3}
+  critHitVfx: {fileID: 7854975265353097095, guid: e110c7922ef1f9c4098d1b44f8fe3d51, type: 3}
 --- !u!114 &274070550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e28d1c874b49c49a0334565d3cff9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
   targetCheck: {fileID: 1361361242}
   targetCheckRadius: 1
   whatIsTarget:
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
-    baseValue: 100
+    baseValue: 10000
   major:
     strengh:
       baseValue: 0
@@ -619,12 +619,18 @@ MonoBehaviour:
     vitality:
       baseValue: 8
   offense:
-    damage: 10
-    critPower: 0
-    critChance: 0
-    fireDamage: 0
-    iceDamage: 0
-    lightningDamage: 0
+    damage:
+      baseValue: 10
+    critPower:
+      baseValue: 200
+    critChance:
+      baseValue: 100
+    fireDamage:
+      baseValue: 0
+    iceDamage:
+      baseValue: 0
+    lightningDamage:
+      baseValue: 0
   defense:
     armor:
       baseValue: 0
@@ -61972,8 +61978,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDamageMaterial: {fileID: 2100000, guid: 07ed9e5950dba9a45b1196e37739b38b, type: 2}
   onDamageVfxDuration: 0.2
-  hitVfx: {fileID: 0}
   hitVfxColor: {r: 1, g: 1, b: 1, a: 1}
+  hitVfx: {fileID: 0}
+  critHitVfx: {fileID: 0}
 --- !u!1 &1345288076
 GameObject:
   m_ObjectHideFlags: 0
@@ -63083,7 +63090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c782e80fc36dbf74b839b71c5bac3255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 35
   targetCheck: {fileID: 439683228}
   targetCheckRadius: 1
   whatIsTarget:
@@ -63122,8 +63128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDamageMaterial: {fileID: 2100000, guid: 07ed9e5950dba9a45b1196e37739b38b, type: 2}
   onDamageVfxDuration: 0.2
-  hitVfx: {fileID: 1121745665439297114, guid: 6eb44fe143bed544b98e7f91927d5871, type: 3}
   hitVfxColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+  hitVfx: {fileID: 1121745665439297114, guid: 6eb44fe143bed544b98e7f91927d5871, type: 3}
+  critHitVfx: {fileID: 0}
   attackAlert: {fileID: 466162226}
 --- !u!114 &1824338489
 MonoBehaviour:
@@ -63138,7 +63145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
-    baseValue: 100
+    baseValue: 10000
   major:
     strengh:
       baseValue: 0
@@ -63149,17 +63156,23 @@ MonoBehaviour:
     vitality:
       baseValue: 0
   offense:
-    damage: 10
-    critPower: 0
-    critChance: 0
-    fireDamage: 0
-    iceDamage: 0
-    lightningDamage: 0
+    damage:
+      baseValue: 0
+    critPower:
+      baseValue: 0
+    critChance:
+      baseValue: 0
+    fireDamage:
+      baseValue: 0
+    iceDamage:
+      baseValue: 0
+    lightningDamage:
+      baseValue: 0
   defense:
     armor:
       baseValue: 0
     evasion:
-      baseValue: 100
+      baseValue: 0
     fireRes:
       baseValue: 0
     iceRes:

@@ -5,12 +5,12 @@ using UnityEngine;
 public class Stat_OffenceGroup
 {
     // Physical damage
-    public float damage;
-    public float critPower;
-    public float critChance;
+    public Stat damage;
+    public Stat critPower;
+    public Stat critChance;
 
     // Elemental damage
-    public float fireDamage;
-    public float iceDamage;
-    public float lightningDamage;
+    public Stat fireDamage;
+    public Stat iceDamage;
+    public Stat lightningDamage;
 }
