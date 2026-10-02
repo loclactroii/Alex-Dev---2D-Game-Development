@@ -617,7 +617,7 @@ MonoBehaviour:
     intelligence:
       baseValue: 0
     vitality:
-      baseValue: 8
+      baseValue: 0
   offense:
     damage:
       baseValue: 10
@@ -625,6 +625,8 @@ MonoBehaviour:
       baseValue: 200
     critChance:
       baseValue: 100
+    armorReduction:
+      baseValue: 0
     fireDamage:
       baseValue: 0
     iceDamage:
@@ -635,7 +637,7 @@ MonoBehaviour:
     armor:
       baseValue: 0
     evasion:
-      baseValue: 80
+      baseValue: 0
     fireRes:
       baseValue: 0
     iceRes:
@@ -63001,7 +63003,7 @@ Transform:
   m_GameObject: {fileID: 1824338481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.35, y: 0.35, z: -0.18522522}
+  m_LocalPosition: {x: -8.13, y: 0.31, z: -0.18522522}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -63157,17 +63159,19 @@ MonoBehaviour:
       baseValue: 0
   offense:
     damage:
-      baseValue: 0
+      baseValue: 10
     critPower:
       baseValue: 0
     critChance:
       baseValue: 0
+    armorReduction:
+      baseValue: 0
     fireDamage:
-      baseValue: 0
+      baseValue: 10
     iceDamage:
-      baseValue: 0
+      baseValue: 6
     lightningDamage:
-      baseValue: 0
+      baseValue: 7
   defense:
     armor:
       baseValue: 0

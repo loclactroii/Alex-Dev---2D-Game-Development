@@ -20,13 +20,14 @@ public class Entity_Combat : MonoBehaviour
     {
         foreach(var target in GetDetectedColliers())
         {
-            IDamagable damagable = target.GetComponent<IDamagable>();
+            IDamagable damegable = target.GetComponent<IDamagable>();
 
-            if (damagable == null)
+            if (damegable == null)
                 continue; // skip this target, go to the next target
 
+            float elementalDamage = stats.GetElementalDamage();
             float damage = stats.GetPhysicalDamage(out bool isCrit);
-            bool targetGotHit = damagable.TakeDamage(damage, transform);
+            bool targetGotHit = damegable.TakeDamage(damage, elementalDamage, transform);
             if(targetGotHit)
                 vfx.CreateOnHitVFX(target.transform, isCrit);
         }
