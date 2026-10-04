@@ -25,10 +25,10 @@ public class Entity_Combat : MonoBehaviour
             if (damegable == null)
                 continue; // skip this target, go to the next target
 
-            float elementalDamage = stats.GetElementalDamage();
+            float elementalDamage = stats.GetElementalDamage(out ElementType element);
             float damage = stats.GetPhysicalDamage(out bool isCrit);
-            bool targetGotHit = damegable.TakeDamage(damage, elementalDamage, transform);
-            if(targetGotHit)
+            bool targetGotHit = damegable.TakeDamage(damage, elementalDamage, element, transform);
+            if (targetGotHit)
                 vfx.CreateOnHitVFX(target.transform, isCrit);
         }
     }

@@ -639,7 +639,7 @@ MonoBehaviour:
     evasion:
       baseValue: 0
     fireRes:
-      baseValue: 0
+      baseValue: 50
     iceRes:
       baseValue: 0
     lightningRes:
@@ -985,7 +985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &466162227
 Transform:
   m_ObjectHideFlags: 0
@@ -61591,37 +61591,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1029113752
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1029113753}
-  m_Layer: 0
-  m_Name: ChanceTest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1029113753
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029113752}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.049407, y: 0.67118907, z: -0.5762214}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1084371932
 GameObject:
   m_ObjectHideFlags: 0
@@ -63132,7 +63101,7 @@ MonoBehaviour:
   onDamageVfxDuration: 0.2
   hitVfxColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
   hitVfx: {fileID: 1121745665439297114, guid: 6eb44fe143bed544b98e7f91927d5871, type: 3}
-  critHitVfx: {fileID: 0}
+  critHitVfx: {fileID: 7854975265353097095, guid: e110c7922ef1f9c4098d1b44f8fe3d51, type: 3}
   attackAlert: {fileID: 466162226}
 --- !u!114 &1824338489
 MonoBehaviour:
@@ -63394,4 +63363,3 @@ SceneRoots:
   - {fileID: 1824338483}
   - {fileID: 1250166926}
   - {fileID: 807498851}
-  - {fileID: 1029113753}

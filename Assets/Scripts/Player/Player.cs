@@ -88,6 +88,8 @@ public class Player : Entity
 
     private void OnEnable()
     {
+        Debug.Log(input);
+
         input.Enable();
 
         input.Player.Movement.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
