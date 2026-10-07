@@ -10,6 +10,7 @@ public class EnemyState : EnityState
 
         rb = enemy.rb;
         anim = enemy.anim;
+        stats = enemy.stats;
     }
 
     public override void UpdateAnimationParameters()
