@@ -50,7 +50,7 @@ public class Entity_Stats : MonoBehaviour
         float baseResistance = 0;
         float bonusResistance = major.intelligence.GetValue() * .5f;
 
-        switch(element)
+        switch (element)
         {
             case ElementType.Fire:
                 baseResistance = defense.fireRes.GetValue();
@@ -65,7 +65,7 @@ public class Entity_Stats : MonoBehaviour
 
         float resistance = baseResistance + bonusResistance;
         float resistanceCap = 75f;
-        float finalResistance = Mathf.Clamp(resistance, 0, resistanceCap)/100;
+        float finalResistance = Mathf.Clamp(resistance, 0, resistanceCap) / 100;
 
         return finalResistance;
     }
@@ -135,5 +135,40 @@ public class Entity_Stats : MonoBehaviour
         float finalMitigation = Mathf.Clamp(mitigation, 0, mitigationCap); // Max mitigation will be capped at 85%
 
         return finalMitigation;
+    }
+
+    public Stat GetStatByType(StatType type)
+    {
+        switch (type)
+        {
+            case StatType.MaxHealh: return resources.maxHealth;
+            case StatType.HealthRegen: return resources.healthRegen;
+
+            case StatType.Strength: return major.strengh;
+            case StatType.Agility: return major.agility;
+            case StatType.Intelligence: return major.intelligence;
+            case StatType.Vitality: return major.vitality;
+
+            case StatType.AttackSpeed: return offense.attackSpeed;
+            case StatType.Damage: return offense.damage;
+            case StatType.CritChance: return offense.critChance;
+            case StatType.CritPower: return offense.critPower;
+            case StatType.ArmorReduction: return offense.armorReduction;
+
+            case StatType.FireDamage: return offense.fireDamage;
+            case StatType.IceDamage: return offense.iceDamage;
+            case StatType.LightningDamage: return offense.lightningDamage;
+
+            case StatType.Armor: return defense.armor;
+            case StatType.Evasion: return defense.evasion;
+
+            case StatType.IceResistance: return defense.iceRes;
+            case StatType.FireResistance: return defense.fireRes;
+            case StatType.LightningResistance: return defense.lightningRes;
+
+            default:
+                Debug.LogWarning($"StatType {type} not implemented yet.");
+                return null;
+        }
     }
 }
