@@ -1,0 +1,70 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+{
+    [SerializeField] private Image skillIcon;
+    private string lockedColorHex = "#797979";
+    [SerializeField] private Color skillLockedColor;
+    private Color lastColor;
+    public bool isUnlocked;
+    public bool isLocked;
+
+    private void Awake()
+    {
+        UpdateIconColor(GetColorByHex(lockedColorHex));
+    }
+
+    private void Unlock()
+    {
+        isUnlocked = true;
+        UpdateIconColor(Color.white);
+        // Find Player_SkillManager
+        // Unlock skill on skill manager
+    }
+
+    private bool CanBeUnlocked()
+    {
+        if (isLocked || isUnlocked)
+            return false;
+
+        return true;
+    }
+
+    private void UpdateIconColor(Color color)
+    {
+        if (skillIcon == null)
+            return;
+
+        lastColor = skillIcon.color;
+        skillIcon.color = color;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (CanBeUnlocked())
+            Unlock();
+        else
+            Debug.Log("Cannot be unlocked");
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (isUnlocked == false)
+            UpdateIconColor(Color.white * .9f);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (isUnlocked == false)
+            UpdateIconColor(lastColor);
+    }
+
+    private Color GetColorByHex(string hexNumber)
+    {
+        ColorUtility.TryParseHtmlString(hexNumber, out Color color);
+
+        return color;
+    }
+}
