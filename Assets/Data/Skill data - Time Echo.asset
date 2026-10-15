@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c188cb8f0bc98f459e783547399a53e, type: 3}
   m_Name: Skill data - Time Echo
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 1
   displayName: Time Echo
   description: 'Create a time echo of yourself.
 
