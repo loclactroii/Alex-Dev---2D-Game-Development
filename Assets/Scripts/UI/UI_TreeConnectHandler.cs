@@ -11,14 +11,14 @@ public class UI_TreeConnectDetails
 
 public class UI_TreeConnectHandler : MonoBehaviour
 {
-    private RectTransform rect;
+    private RectTransform rect => GetComponent<RectTransform>();
     [SerializeField] private UI_TreeConnectDetails[] connectionDetails;
     [SerializeField] private UI_TreeConnection[] connections;
 
     private void OnValidate()
     {
-        if (rect == null)
-            rect = GetComponent<RectTransform>();
+        if (connectionDetails.Length < 0)
+            return;
 
         if(connectionDetails.Length != connections.Length)
         {
@@ -38,7 +38,7 @@ public class UI_TreeConnectHandler : MonoBehaviour
 
             connection.DirectConnection(detail.direction, detail.length);
             Vector2 targetPosition = connection.GetConnectionPoint(rect);
-            detail.childNode.SetPosition(targetPosition);
+            detail.childNode?.SetPosition(targetPosition);
         }
     }
 
