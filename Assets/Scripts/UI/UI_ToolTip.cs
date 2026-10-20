@@ -12,7 +12,7 @@ public class UI_ToolTip : MonoBehaviour
 
     public virtual void ShowToolTip(bool show, RectTransform targetRect)
     {
-        if(show == false)
+        if (show == false)
         {
             rect.position = new Vector2(9999, 9999);
             return;
@@ -40,6 +40,10 @@ public class UI_ToolTip : MonoBehaviour
         else if (topY < screenbottom)
             targetPosition.y = screenbottom + verticalHalf + offset.y;
 
-            rect.position = targetPosition;
+        rect.position = targetPosition;
+    }
+    protected string GetColoredText(string color, string text)
+    {
+        return $"<color={color}>{text}</color>";
     }
 }
