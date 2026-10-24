@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55.627808, y: -10.159706}
+  m_AnchoredPosition: {x: -55.627808, y: -10.1596985}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57857603
@@ -1742,10 +1742,10 @@ GameObject:
   - component: {fileID: 274070546}
   - component: {fileID: 274070550}
   - component: {fileID: 274070548}
-  - component: {fileID: 274070549}
   - component: {fileID: 274070551}
   - component: {fileID: 274070552}
   - component: {fileID: 274070553}
+  - component: {fileID: 274070554}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1893,26 +1893,6 @@ MonoBehaviour:
   knockbackDuration: 0.2
   heavyKnockbackDuration: 0.5
   heavyDamageThreshold: 0.3
---- !u!114 &274070549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274070542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0884aa7d18e1c34f9ee23ab2a5c7f0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onDamageMaterial: {fileID: 2100000, guid: 07ed9e5950dba9a45b1196e37739b38b, type: 2}
-  onDamageVfxDuration: 0.15
-  hitVfxColor: {r: 0.9892141, g: 1, b: 0.042452812, a: 1}
-  hitVfx: {fileID: 1121745665439297114, guid: 6eb44fe143bed544b98e7f91927d5871, type: 3}
-  critHitVfx: {fileID: 7854975265353097095, guid: e110c7922ef1f9c4098d1b44f8fe3d51, type: 3}
-  chillVfx: {r: 0, g: 1, b: 1, a: 1}
-  burnVfx: {r: 1, g: 0, b: 0, a: 1}
-  electrifyVfx: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &274070550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2037,6 +2017,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01987fbb0604bfe40934a6a167cd7e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &274070554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274070542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3676accf1a9eaa84e9dbbc821bca1640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDamageMaterial: {fileID: 2100000, guid: 07ed9e5950dba9a45b1196e37739b38b, type: 2}
+  onDamageVfxDuration: 0.15
+  hitVfxColor: {r: 1, g: 1, b: 1, a: 1}
+  hitVfx: {fileID: 1121745665439297114, guid: 6eb44fe143bed544b98e7f91927d5871, type: 3}
+  critHitVfx: {fileID: 7854975265353097095, guid: e110c7922ef1f9c4098d1b44f8fe3d51, type: 3}
+  chillVfx: {r: 0, g: 1, b: 1, a: 1}
+  burnVfx: {r: 1, g: 0, b: 0, a: 1}
+  electrifyVfx: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  imageEchoInterval: 0.05
+  imageEchoPrefab: {fileID: 3453799186662821291, guid: 9b566cf4fadeecd439b3ad677705703d, type: 3}
 --- !u!1 &295567162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,7 +3321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -138.01147, y: -137.0513}
+  m_AnchoredPosition: {x: -138.01147, y: -137.05132}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &545996634
@@ -65118,7 +65120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillType: 0
   upgradeType: 0
-  cooldown: 0
+  cooldown: 3
 --- !u!1 &1192496774
 GameObject:
   m_ObjectHideFlags: 0
@@ -67008,7 +67010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -196.0769, y: -177.5404}
+  m_AnchoredPosition: {x: -196.0769, y: -177.54039}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662246771
@@ -67418,7 +67420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1821929644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -68422,7 +68424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116.55267, y: -182.34018}
+  m_AnchoredPosition: {x: 116.55261, y: -182.3402}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066124278
@@ -68560,7 +68562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -137.49997}
+  m_AnchoredPosition: {x: 0, y: -137.49995}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2078849307
